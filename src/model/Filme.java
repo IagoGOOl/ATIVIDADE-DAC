@@ -1,21 +1,24 @@
 package model;
 
-public class filmes {
-    private String tituloDoFilme;
+public class Filme {
+    
+	private String titulo;
     private String genero;
     private String anoLancamento;
-    public filmes() {
+    
+    public Filme() {
     }
-    public filmes(String tituloDoFilme, String genero, String anoLancamento) {
-        this.tituloDoFilme = tituloDoFilme;
+    
+    public Filme(String titulo, String genero, String anoLancamento) {
+        this.titulo = titulo;
         this.genero = genero;
         this.anoLancamento = anoLancamento;
     }
-    public String getTituloDoFilme() {
-        return tituloDoFilme;
+    public String getTitulo() {
+        return titulo;
     }
-    public void setTituloDoFilme(String tituloDoFilme) {
-        this.tituloDoFilme = tituloDoFilme;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
     public String getGenero() {
         return genero;
@@ -32,7 +35,7 @@ public class filmes {
     
     @Override
     public String toString() {
-        return "filmes [tituloDoFilme=" + tituloDoFilme + ", genero=" + genero + ", anoLancamento=" + anoLancamento
+        return "filmes [titulo=" + titulo + ", genero=" + genero + ", anoLancamento=" + anoLancamento
                 + "]";
     }
 
