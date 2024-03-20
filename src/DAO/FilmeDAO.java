@@ -1,6 +1,7 @@
 package DAO;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -38,8 +39,8 @@ public class FilmeDAO {
 	
 	public void criar(Filme filme) throws SQLException {
 		String query = "INSERT INTO filme (titulo, genero, anoLancamento) VALUES (?, ?, ?)";
-		
 		statement = connection.prepareStatement(query);
+		
 		statement.setString(1, filme.getTitulo());
 		statement.setString(2, filme.getGenero());
 		statement.setString(3, filme.getAnoLancamento());
@@ -53,8 +54,18 @@ public class FilmeDAO {
 		
 	}
 	
-	//TODO delete
-	public void apagar(Filme filme) {
+	
+	public void apagar(Filme filme) throws SQLException {
+		String query = "DELETE FROM filme WHERE id=?";
+		statement = connection.prepareStatement(query);
+		
+		statement.setLong(1, filme.getId());
+		
+		statement.execute();
+		
 		
 	}
+
+
+	
 }
