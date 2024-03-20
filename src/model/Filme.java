@@ -2,6 +2,7 @@ package model;
 
 public class Filme {
     
+	private int id;
 	private String titulo;
     private String genero;
     private String anoLancamento;
@@ -9,8 +10,9 @@ public class Filme {
     public Filme() {
     }
     
-    public Filme(String titulo, String genero, String anoLancamento) {
-        this.titulo = titulo;
+    public Filme(int id, String titulo, String genero, String anoLancamento) {
+        this.id = id;
+    	this.titulo = titulo;
         this.genero = genero;
         this.anoLancamento = anoLancamento;
     }
