@@ -2,6 +2,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 import DAO.FilmeDAO;
+import model.Ator;
 import model.Filme;
 
 public class Main {
@@ -19,6 +20,16 @@ public class Main {
 		
 		FilmeDAO filmeDao = new FilmeDAO();
 		filmeDao.criar(filme);
+
+
+		// CRUD ATOR:
+
+		//Crieando Ator
+
+		Ator ator = new Ator();
+		ator.setNomeArtistico("Paul Walker");
+		ator.setNacionalidade("norte-americano");
+		ator.setNomeCompleto("Paul William Walker IV");
 		
 	}
 
