@@ -49,8 +49,17 @@ public class FilmeDAO {
 		
 	}
 	
-	//TODO update
-	public void atualizar(Filme dadoAntigo, Filme dadoNovo) {
+	
+	public void atualizar(Filme dadoAntigo, Filme dadoNovo) throws SQLException {
+		String query ="UPDATE filme SET titulo=?, genero=?, anoLancamento=?  WHERE id = ?";
+		statement = connection.prepareStatement(query);
+		
+		statement.setString(1, dadoNovo.getTitulo());
+		statement.setString(2, dadoAntigo.getGenero());
+		statement.setString(3, dadoAntigo.getAnoLancamento());
+
+		
+		statement.execute();
 		
 	}
 	
