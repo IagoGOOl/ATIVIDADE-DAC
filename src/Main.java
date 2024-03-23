@@ -24,7 +24,7 @@ public class Main {
 		
 		
 		
-		// Lendo instancias de atores: 
+		// Lendo instancias de filmes: 
 		List<Filme> filmes = filmeDao.findAll();
 		
 		for (Filme f: filmes) {
